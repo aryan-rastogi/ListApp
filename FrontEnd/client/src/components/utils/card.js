@@ -17,7 +17,7 @@ export default function Card(props) {
         console.log(data)
         setData(props)
         console.log(data)
-    })
+    }, [data, props])
 
     return (
         <div>
