@@ -48,13 +48,13 @@ export default function Rank() {
 
    }
 
-   if (data.name == 0){
+   if (data.name === 0){
     fetchData();
    }
    
  
    return;
- }, [params.id, navigate, unranked, rankings, bruh]);
+ }, [params.id, navigate, unranked, rankings, bruh, data.name]);
  
   async function onSubmit(e) {
     let newSubmissions = data.submissions

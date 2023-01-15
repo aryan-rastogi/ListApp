@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import Card from "../components/utils/card"
  
 export default function RecordList() {
