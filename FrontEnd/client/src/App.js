@@ -8,6 +8,7 @@ import Navbar from "./components/navbar";
 import RecordList from "./components/recordList";
 import Rank from "./components/rank";
 import Create from "./components/create";
+
  
 const App = () => {
  return (
