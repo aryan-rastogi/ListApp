@@ -22,7 +22,7 @@ export default function Rank() {
     console.log("pulling data")
 
      const id = params.id.toString();
-     const response = await fetch(`http://localhost:5000/record/${params.id.toString()}`);
+     const response = await fetch(process.env.REACT_APP_BACKEND_URL + `/record/${params.id.toString()}`);
  
      if (!response.ok) {
        const message = `An error has occurred: ${response.statusText}`;
@@ -64,7 +64,7 @@ export default function Rank() {
     newSubmissions.push(rankings)
 
     console.log("pushing data", newSubmissions)
-    await fetch(`http://localhost:5000/addRanking/${params.id}`, {
+    await fetch(process.env.REACT_APP_BACKEND_URL + `/addRanking/${params.id}`, {
       method: "POST",
       body: JSON.stringify(newSubmissions),
       headers: {
